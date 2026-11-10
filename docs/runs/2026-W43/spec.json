@@ -1,0 +1,18 @@
+{
+  "title": "PDAC atlas: weekly update",
+  "subtitle": "Anabella Phelps | 2026-10-26",
+  "slides": [
+    {
+      "type": "text",
+      "title": "What changed this week",
+      "bullets": [
+        "Rebuild pipeline imported as baseline",
+        "SingleR fix: reference agreement 22.8% to 73.8%",
+        "Rebuild v3: sample manifest, gene harmonization, doublets",
+        "qs2 object storage; multithreaded Harmony"
+      ],
+      "notes": "98c534d: Imported the rebuild pipeline (rebuild_00..04b, sbatch, SingleR reference setup) unchanged from $HOME; original first-pass scripts now in code/legacy. Baseline for the cleanup and re-harmonization commits.\n\n1436e3d: Fixed SingleR lineage mapping that made the stromal gate fail everywhere. HPCA has no CAF profile, so tumour fibroblasts were labelled Tissue_stem_cells, Chondrocytes or Osteoblasts (Blueprint: Mesangial cells); map_label sent those to 'stemlike'/'chondro', so no stromal cluster reached the 'fibroblast' gate (0/20) and the two references agreed on 22.8% of cells. Now mapped to the fibroblast lineage; neuroepithelial matched before epithelial, iPS pattern anchored, adipocyte kept separate. Re-scored on existing per-cell labels: agreement 73.8%, 17/20 clusters HPCA-fibroblast >= 50%.\n\ncc657e7: Rebuild v3. 00m: per-sample manifest from the 212-column metadata, namespaced sample/patient keys (P01-P10 repeat across datasets), tissue class, include_in_atlas with recorded reason; excludes blood, metastases, non-PDAC tumours and GSE211644. 01 rewritten: HGNC prev_symbol (unique) and Ensembl ID only, never alias_symbol; strips HGNC quotes around multi-valued fields (the bug that left ~250 prev_symbol pairs unmerged in v1); rows only summed if never co-detected within one sample (GSE154778 mixes two reference builds). 01c: scDblFinder per sample on the whole atlas, expected rate capped at one 10x capture for pooled samples. 02: subsets apply manifest + doublet exclusions, log excluded cells by reason. slurm: one sbatch per step, run_v3.sh chains with afterok dependencies. 01b retired to legacy.\n\n1b1e433: Seurat objects stored as qs2. /ix reads at ~27 MB/s; stromal object .rds 2.98 GB / 84 s to read vs qs2 0.47 GB, 2 s to write, seconds to read. Old TNK step 3 spent 31 of 80 min on I/O. read_obj()/save_obj() in rebuild/io.R with legacy .rds fallback and temp-file + rename writes. Step 3 RunHarmony ncores = SLURM_CPUS_PER_TASK (was 1).\n\nb0b8c67: Added top-level README pointing to the pipeline docs.",
+      "cites": ["98c534d", "1436e3d", "cc657e7", "1b1e433", "b0b8c67"]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+VERDICT: CANNOT CHECK
+
+I couldn't get the snapshot diff, so I can't judge any violations. Both attempts to run the script were blocked at the permission step. The first was a compound command, the second a single call. Neither ran.
+
+- **Snapshot diff:** not produced. The command was `/Users/anabellaphelps/Documents/GitHub/lab-deck-toolkit/.venv/bin/python .claude/skills/no-rewrite/scripts/snapshot.py diff /Users/anabellaphelps/Library/Logs/labdeck/2026-W43-194957/before.json`.
+- **Allowed paths:** readable. `ALLOWED.txt` has one glob, `/Users/anabellaphelps/LabDecks/2026-W43/**`. It has no `git:<repo>` line, so any git change would count as a violation.
+- **Not verified:** I didn't confirm that `before.json` exists, since the `ls` was blocked with the rest.
+
+I haven't compared the live filesystem against the snapshot by any other route, because the check is meant to rest on the script's diff alone.
+
+If you approve that one command, I'll run it and write the full report. I can also work from the diff output if you paste it.

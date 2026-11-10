@@ -1,0 +1,14 @@
+{
+  "repo": "~/code/pdac-atlas",
+  "figures_dir": "figures",
+  "notes_dir": "notes",
+  "decks_dir": "~/LabDecks",
+  "template": "~/Library/CloudStorage/GoogleDrive-anabellaphelps41@gmail.com/My Drive/Lab_Meeting_11_09_26_Phelps_v5.pptx",
+  "title_layouts": ["Title Slide"],
+  "content_layouts": ["Title Only", "Title and Content"],
+  "meeting_weekday": 0,
+  "meeting_hour": 13,
+  "max_words_per_slide": 30,
+  "min_font_pt": 14,
+  "body_font_pt": 18
+}

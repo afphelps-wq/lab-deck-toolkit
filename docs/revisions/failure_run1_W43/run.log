@@ -1,0 +1,36 @@
+=== run Mon Nov  9 19:49:57 EST 2026 week=2026-W43 since=2026-10-19T13:00 until=2026-10-26T13:00
+/Users/anabellaphelps/Library/Logs/labdeck/2026-W43-194957/before.json
+I couldn't finish the deck. The progress log and slide spec are written, but the two commands that build and check the deck were held for your approval, so no `.pptx` exists yet.
+
+**Written in `/Users/anabellaphelps/LabDecks/2026-W43/`:**
+- `progress_log.md`: the five commits from Oct 19–26, summarised in plain words with their hashes. No figures, no notes, nothing left out of the deck.
+- `spec.json`: a 2-slide deck.
+  1. Title: "PDAC atlas: weekly update", subtitle "Anabella Phelps | 2026-10-26".
+  2. "What changed this week", with four bullets:
+     - Rebuild pipeline imported into git as baseline
+     - SingleR lineage fix: reference agreement 22.8% to 73.8%
+     - Rebuild v3: sample manifest, gene harmonization, doublets
+     - qs2 object storage; multithreaded Harmony
+
+     The README commit is cited but has no bullet of its own. The full detail from each commit message is in the speaker notes, with all five hashes listed as sources.
+
+The week had commits but no figures with captions and no notes. So there are no figure slides, no blockers slide and no missing-figures slide. By my count, slide 2 has 29 words against the 30-word limit, but the lint hasn't actually run.
+
+**To finish, approve these or run them yourself:**
+```
+/Users/anabellaphelps/Documents/GitHub/lab-deck-toolkit/.venv/bin/python /Users/anabellaphelps/Documents/GitHub/lab-deck-toolkit/.claude/skills/weekly-lab-deck/scripts/build_deck.py /Users/anabellaphelps/LabDecks/2026-W43/spec.json /Users/anabellaphelps/LabDecks/2026-W43/lab_meeting_2026-10-26.pptx
+
+/Users/anabellaphelps/Documents/GitHub/lab-deck-toolkit/.venv/bin/python /Users/anabellaphelps/Documents/GitHub/lab-deck-toolkit/.claude/skills/weekly-lab-deck/scripts/lint_deck.py /Users/anabellaphelps/LabDecks/2026-W43/lab_meeting_2026-10-26.pptx
+```
+Once they're allowed, I'll build the deck, lint it, fix anything it flags, and send you the final paths.
+VERDICT: CANNOT CHECK
+
+I couldn't get the snapshot diff, so I can't judge any violations. Both attempts to run the script were blocked at the permission step. The first was a compound command, the second a single call. Neither ran.
+
+- **Snapshot diff:** not produced. The command was `/Users/anabellaphelps/Documents/GitHub/lab-deck-toolkit/.venv/bin/python .claude/skills/no-rewrite/scripts/snapshot.py diff /Users/anabellaphelps/Library/Logs/labdeck/2026-W43-194957/before.json`.
+- **Allowed paths:** readable. `ALLOWED.txt` has one glob, `/Users/anabellaphelps/LabDecks/2026-W43/**`. It has no `git:<repo>` line, so any git change would count as a violation.
+- **Not verified:** I didn't confirm that `before.json` exists, since the `ls` was blocked with the rest.
+
+I haven't compared the live filesystem against the snapshot by any other route, because the check is meant to rest on the script's diff alone.
+
+If you approve that one command, I'll run it and write the full report. I can also work from the diff output if you paste it.

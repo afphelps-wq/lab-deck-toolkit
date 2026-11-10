@@ -1,0 +1,8 @@
+VERDICT: PASS
+
+Touched: 0 created, 1 modified, 0 deleted
+Violations: none
+Allowed changes:
+- /Users/anabellaphelps/LabDecks/2026-W45/lab_meeting_2026-11-09.pptx (matched /Users/anabellaphelps/LabDecks/2026-W45/**)
+
+The git section of the diff was empty, so no repo had a moved HEAD.

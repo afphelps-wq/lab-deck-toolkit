@@ -1,0 +1,4 @@
+{"mcpServers": {"progress-ledger": {
+  "command": "/ABSOLUTE/PATH/TO/lab-deck-toolkit/.venv/bin/python",
+  "args": ["/ABSOLUTE/PATH/TO/lab-deck-toolkit/progress_ledger/server.py"],
+  "env": {"LAB_DECK_CONFIG": "/ABSOLUTE/PATH/TO/lab-deck-toolkit/config.json"}}}}

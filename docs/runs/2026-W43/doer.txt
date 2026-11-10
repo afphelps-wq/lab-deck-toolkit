@@ -1,0 +1,21 @@
+I built the W43 deck (meeting 2026-10-26) and it passes the lint check with no violations.
+
+- **Deck:** `/Users/anabellaphelps/LabDecks/2026-W43/lab_meeting_2026-10-26.pptx`
+- **Progress log:** `/Users/anabellaphelps/LabDecks/2026-W43/progress_log.md`
+
+The deck has two slides:
+1. **Title:** "PDAC atlas: weekly update" / "Anabella Phelps | 2026-10-26".
+2. **"What changed this week":** four bullets covering the five commits:
+   - importing the rebuild pipeline as a baseline
+   - the SingleR fix, which raised agreement between the two references from 22.8% to 73.8%
+   - the v3 rebuild (sample manifest, gene-name merging, doublet removal)
+   - storing objects as qs2, plus multithreaded Harmony
+
+   The full commit details are in the speaker notes, with all five commit hashes cited.
+
+**No figure slides:** no figures were committed that week, and none were missing captions, so there's no "Missing figures" slide either. There were no notes, so there's no blockers slide.
+
+**Things to know:**
+- **Files already there:** the output folder already had a `progress_log.md` and `spec.json` from an earlier run. They matched this week's evidence and the required format, so I kept them instead of rewriting them. My only change was to `spec.json`.
+- **Lint fix:** the first build had 31 words on slide 2, one over the limit of 30. I shortened two bullets ("…imported as baseline", "SingleR fix: …") to bring it to 28, then rebuilt.
+- **Deck may have been replaced:** I wasn't allowed to list the output folder, so I couldn't check whether an earlier `.pptx` was there. If one was, the build replaced it.

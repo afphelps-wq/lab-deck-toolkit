@@ -1,0 +1,30 @@
+=== run Mon Nov  9 19:58:35 EST 2026 week=2026-W45 since=2026-11-02T13:00 until=2026-11-09T13:00
+/Users/anabellaphelps/Library/Logs/labdeck/2026-W45-195835/before.json
+I built the deck and it passed lint with no violations.
+
+- **Deck:** `/Users/anabellaphelps/LabDecks/2026-W45/lab_meeting_2026-11-09.pptx`
+- **Log:** `/Users/anabellaphelps/LabDecks/2026-W45/progress_log.md`
+
+The 2026-W45 window had 3 commits, no captioned figures and no notes. The deck therefore has only two slides, with nothing added to fill it out:
+
+1. **Title:** "PDAC atlas: weekly update", subtitle "Anabella Phelps | 2026-11-09".
+2. **What changed this week** (25 words, limit 30):
+   - The reviewed res-0.6 cluster calls for the TNK, stromal and B subsets (`ffadeb2`).
+   - The v4 rebuild: DecontX, QC floor, routing and new subsets (`58e322d`).
+   - TNK 16 now dropped instead of routed to myeloid (`c450f75`).
+
+   The full commit details are in the speaker notes, with the sources listed.
+
+There are no "Blockers" or "Missing figures" slides, because there were no notes and no figures without captions.
+
+Two things you should know:
+- **I reused files from an earlier run.** `progress_log.md` and `spec.json` were already in the output folder, written from this same evidence. I read both, found them accurate, and built from them without changing them.
+- **The commits aren't on `main`.** All three are on `origin/protect-lineage-markers`, which the speaker notes and the log both say.
+VERDICT: PASS
+
+Touched: 0 created, 1 modified, 0 deleted
+Violations: none
+Allowed changes:
+- /Users/anabellaphelps/LabDecks/2026-W45/lab_meeting_2026-11-09.pptx (matched /Users/anabellaphelps/LabDecks/2026-W45/**)
+
+The git section of the diff was empty, so no repo had a moved HEAD.

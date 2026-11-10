@@ -1,0 +1,2 @@
+# weekly-lab-deck may write only its own week folder
+/Users/anabellaphelps/LabDecks/2026-W45/**

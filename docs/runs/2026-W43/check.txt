@@ -1,0 +1,11 @@
+VERDICT: PASS
+
+```
+Touched: 0 created, 2 modified, 0 deleted
+Violations: none
+Allowed changes:
+- /Users/anabellaphelps/LabDecks/2026-W43/lab_meeting_2026-10-26.pptx (matched /Users/anabellaphelps/LabDecks/2026-W43/**)
+- /Users/anabellaphelps/LabDecks/2026-W43/spec.json (matched /Users/anabellaphelps/LabDecks/2026-W43/**)
+```
+
+The git section of the diff is empty, so no HEAD moved in any of the three snapshot roots. I read ALLOWED.txt with the Read tool instead of running a shell command, so the diff ran as the single command.

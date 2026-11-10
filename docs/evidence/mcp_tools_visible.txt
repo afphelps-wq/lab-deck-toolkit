@@ -1,0 +1,11 @@
+There's one MCP server tool in this session:
+
+- **`mcp__progress-ledger__week_evidence`**: Comes from the `progress-ledger` MCP server. Going by the `weekly-lab-deck` skill that uses it, it collects a week's evidence (git commits, captioned figures and your notes) for the Monday lab-meeting deck and progress log. It's a deferred tool and I haven't loaded its schema, so I don't know its exact parameters or output. That description comes from the skill, not from the tool's own definition.
+
+There are also three built-in helper tools for reading MCP *resources* rather than calling MCP tools:
+
+- **`ListMcpResourcesTool`**: Lists the resources that connected MCP servers make available.
+- **`ReadMcpResourceTool`**: Reads one MCP resource by its URI.
+- **`ReadMcpResourceDirTool`**: Lists or reads a directory-style MCP resource.
+
+None of the browser or computer-use MCP tools (`mcp__Claude_Browser__*`, `mcp__claude-in-chrome__*`, `mcp__computer-use__*`) are available right now. I didn't call any of these tools.

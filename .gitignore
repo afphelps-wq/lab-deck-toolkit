@@ -1,0 +1,8 @@
+# machine-specific (copy from config.example.json / mcp.example.json)
+config.json
+mcp.json
+.venv/
+__pycache__/
+.DS_Store
+# personal input file: my full lab-meeting deck, used only as a style template
+template.pptx
