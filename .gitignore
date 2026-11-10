@@ -6,3 +6,4 @@ __pycache__/
 .DS_Store
 # personal input file: my full lab-meeting deck, used only as a style template
 template.pptx
+.Rhistory
